@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Vendo Machine</title>
 </head>
 <body>
 <?php
@@ -27,17 +27,17 @@ session_start();
                     $_SESSION['Username'] = $admin1;
 
 
-                    echo '<div class="alert alert-success w-50 p-3 mt-4 align="center">
+                    echo '<div class="alert alert-success p-3 mx-auto" style="width: 355px">
                     Welcome to the System: ',$admin1,
                    '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
                 }
                 elseif(($_POST['Username'] == $admin2 && $_POST['Password']==$passAdmin2)){
                         $_SESSION['Username'] = $admin2;
-                        echo '<div class="alert alert-success w-50 p-3 mx-auto"> Welcome to the System: ', $admin2, '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>'; 
+                        echo '<div class="alert alert-success p-3 mx-auto" style="width: 355px"> Welcome to the System: ', $admin2, '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>'; 
                     }
                     else
                     {
-                    echo '<div class="alert alert-danger w-50 p-3 mx-auto">
+                    echo '<div class="alert alert-danger p-3 mx-auto" style="width: 355px">
                    Invalid  Username / Password
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
                     }         
@@ -57,20 +57,20 @@ session_start();
                         $_SESSION['Username'] = $ContMan1;
     
     
-                        echo '<div class="alert alert-success w-50 p-3 mx-auto">
-                        welcome to the system ',$ContMan1,
+                        echo '<div class="alert alert-success p-3 mx-auto" style="width: 355px">
+                        Welcome to the system: ',$ContMan1,
                        '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
                     }
                     elseif(($_POST['Username'] == $ContMan2 && $_POST['Password']==$PcontMan2)){
                             $_SESSION['Username'] = $ContMan2;
-                            echo '<div class="alert alert-success w-50 p-3 mx-auto">
-                            welcome to the system ',$ContMan2,
+                            echo '<div class="alert alert-success p-3 mx-auto" style="width: 355px">
+                            Welcome to the system: ',$ContMan2,
                            '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>'; 
                         }
                         else
                         {
-                        echo '<div class="alert alert-danger w-50 p-3 mx-auto">
-                        You Entered the wrong password
+                        echo '<div class="alert alert-danger p-3 mx-auto" style="width: 355px">
+                        Invalid  Username / Password
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
                         }         
                     }
@@ -87,14 +87,14 @@ session_start();
                             $_SESSION['Username'] = $SystemUs1;
         
         
-                            echo '<div class="alert alert-success w-50 p-3 mx-auto">
-                            welcome to the system ',$SystemUs1,
+                            echo '<div class="alert alert-success p-3 mx-auto" style="width: 355px">
+                            Welcome to the system: ',$SystemUs1,
                            '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
                         }
                             else
                             {
-                            echo '<div class="alert alert-danger w-50 p-3 mx-auto">
-                            You Entered the wrong password
+                            echo '<div class="alert alert-danger p-3 mx-auto" style="width: 355px">
+                            Invalid  Username / Password
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
                             }         
                         }
@@ -111,7 +111,7 @@ session_start();
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" method="post">
             <div class="form-row align-items-center">
-            <div class="col-auto my-1 ">
+            <div class="col-12 my-1 ">
             <select class="form-control" id="UType" name ="UserType[]">
                 <option value="admin">Admin</option>
                 <option value="ContMan">Content Manager</option>

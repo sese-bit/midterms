@@ -10,7 +10,7 @@
     <h1>Peys App</h1>
     <form  method ="get">
     <label for="imgSize">Select Photo Size:</label>
-     <input type="range" id="imgSize" name="imgSize"  min="0" max="100" step="10"><br>
+     <input type="range" id="imgSize" name="imgSize"  min="10" max="100" step="10" value="60"><br>
     
     <label for="bColor">Select Border Color:</label>
     <input type="color" name="bdColor" id="bdColor"><br>
@@ -18,8 +18,9 @@
     <input type="submit" name="btnSave" value="Process"><br>
     
     <?php
+    $imageRangeSize = 60;
     if(isset($_GET['btnSave'])){
-        $imageRangeSize = 60;
+        
         $imageRangeSize = $_GET['imgSize'];
         $border = $_GET['bdColor'];
     }

@@ -30,7 +30,7 @@
 </select>
 
 <label for="QtySoda"> Quantity: </label>
-<input type="number" name="QtySoda" id="QtySoda" min="1" max="9999">
+<input type="number" name="QtySoda" id="QtySoda" min="0" max="9999">
 <input type="submit" name="CheckOutbtn" value ="Check Out">
 </fieldset>
 </form>
